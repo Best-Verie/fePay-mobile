@@ -3,7 +3,7 @@ import { StyleSheet, TouchableWithoutFeedback } from "react-native";
 
 import { View, Text } from "react-native";
 
-export default function WelcomeScreen(props: any) {
+export default function SplashScreen(props: any) {
   const { navigation } = props;
   //   const onPress = () => {
   //     console.log("pressed");
@@ -15,7 +15,7 @@ export default function WelcomeScreen(props: any) {
   //     }, 5000);))
   // }
   return (
-    <TouchableWithoutFeedback onPress={() => navigation.navigate("NotFound")}>
+    <TouchableWithoutFeedback onPress={() => navigation.navigate("Intro")}>
       <View style={styles.container}>
         <Text style={styles.welcomeText}>FE-Pay</Text>
       </View>
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#4361EE",
+    fontFamily: "urbanist-bold",
   },
   welcomeText: {
     fontSize: 20,

@@ -17,16 +17,16 @@ import { ColorSchemeName, Pressable } from "react-native";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
-import NotFoundScreen from "../screens/NotFoundScreen";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
-import WelcomeScreen from "../screens/WelcomeScreen";
 import {
   RootStackParamList,
   RootTabParamList,
   RootTabScreenProps,
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
+import SplashScreen from "../screens/SplashScreen";
+import IntroScreen from "../screens/IntroScreen";
 
 export default function Navigation({
   colorScheme,
@@ -53,8 +53,14 @@ function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Root"
-        component={WelcomeScreen}
+        name="Splash"
+        component={SplashScreen}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="Intro"
+        component={IntroScreen}
         options={{ headerShown: false }}
       />
 
