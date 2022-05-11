@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
-import SubmitButton from "./SubmitButton";
 
 export default function SignUpForm() {
   const [value, setValue] = useState(0);
@@ -27,7 +26,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    height: 50,
     backgroundColor: "#fff",
   },
 
@@ -39,11 +37,9 @@ const styles = StyleSheet.create({
     marginTop: 30,
     width: 327,
     height: 54,
-    // paddingHorizontal: 10,
     borderRadius: 8,
     borderColor: "#EAECEE",
     borderWidth: 2,
-    // backgroundColorrr: "#DCDCDC",
   },
   formText: {
     alignItems: "center",

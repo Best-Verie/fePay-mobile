@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   signUpHeaderContent: {
-    marginTop: 60,
-    height: "10%",
+    marginTop: 100,
+    // height: "10%",
   },
   headerText: {
     textAlign: "center",
@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
     color: "#000000",
   },
   signUpForm: {
-    marginTop: 40,
-    height: "60%",
+    marginTop: 0,
+    height: 420,
     backgroundColor: "#fff",
   },
 });
