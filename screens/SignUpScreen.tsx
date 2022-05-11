@@ -2,11 +2,17 @@ import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import BackButton from "../components/BackButton";
 import SignUpForm from "../components/SignUpForm";
-import SubmitButton from "../components/SubmitButton";
-export default function SignUpScreen() {
+export default function SignUpScreen(props: any) {
+  const { navigation } = props;
+  const navigateBack = () => {
+    // console.log("navigateBack");
+    navigation.goBack();
+  };
   return (
     <View style={styles.container}>
-      <View style={styles.backbtnView}>{/* <BackButton /> */}</View>
+      <View style={styles.backbtnView}>
+        <BackButton onPress={navigateBack} />
+      </View>
       <View style={styles.signUpHeaderContent}>
         <Text style={styles.headerText}>Create your FE-Pay account</Text>
       </View>
