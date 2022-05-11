@@ -27,6 +27,8 @@ import {
 import LinkingConfiguration from "./LinkingConfiguration";
 import SplashScreen from "../screens/SplashScreen";
 import IntroScreen from "../screens/IntroScreen";
+import NotFoundScreen from "../screens/NotFoundScreen";
+import SignUpScreen from "../screens/SignUpScreen";
 
 export default function Navigation({
   colorScheme,
@@ -64,6 +66,12 @@ function RootNavigator() {
         options={{ headerShown: false }}
       />
 
+      <Stack.Screen
+        name="SignUp"
+        component={SignUpScreen}
+        options={{ headerShown: false }}
+      />
+
       {/* <Stack.Screen
         name="TabOne"
         component={TabOneScreen}
@@ -76,17 +84,17 @@ function RootNavigator() {
         options={{ headerShown: false }}
       /> */}
 
-      <Stack.Screen
+      {/* <Stack.Screen
         name="NotFound"
         component={TabOneScreen}
         options={{ headerShown: false }}
-      />
+      /> */}
 
-      {/* <Stack.Screen
+      <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
-      /> */}
+      />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>

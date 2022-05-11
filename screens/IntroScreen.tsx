@@ -1,7 +1,17 @@
 import React from "react";
-import { View, StyleSheet, Text, Image, Button } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  Button,
+  Pressable,
+  TouchableWithoutFeedback,
+} from "react-native";
+import SubmitButton from "../components/SubmitButton";
 
-export default function IntroScreen() {
+export default function IntroScreen(props: any) {
+  const { navigation } = props;
   return (
     <View style={styles.container}>
       <Text style={styles.headerText}>FE-Pay</Text>
@@ -20,8 +30,13 @@ export default function IntroScreen() {
         </Text>
       </View>
       <View style={styles.getStarted}>
-        <Button title="Get Started" color="#4361EE" />
+        <SubmitButton title="Get Started" />
       </View>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("SignUp")}>
+        <View style={styles.bottomContent}>
+          <Text style={styles.bottomText}>Login to FE-Pay</Text>
+        </View>
+      </TouchableWithoutFeedback>
     </View>
   );
 }
@@ -47,29 +62,36 @@ const styles = StyleSheet.create({
     height: 200,
   },
   descriptionTexts: {
-    marginTop: 20,
+    marginTop: 40,
   },
   ultimateText: {
+    marginTop: 30,
     fontSize: 24,
-    fontWeight: "700",
+    fontWeight: "500",
     lineHeight: 30,
     textAlign: "center",
     fontFamily: "urbanist-bold",
   },
   lighDescrText: {
-    fontSize: 16,
-    fontWeight: "500",
+    marginTop: 20,
+    fontSize: 14,
+    fontWeight: "400",
     color: "gray",
     textAlign: "center",
     lineHeight: 20,
     fontFamily: "urbanist-regular",
   },
+
   getStarted: {
+    marginTop: 40,
+  },
+  bottomContent: {
     marginTop: 20,
   },
-  btn: {
-    backgroundColor: "#4361EE",
-    borderRadius: 24,
-    blendMode: "passthrough",
+  bottomText: {
+    marginTop: 20,
+    fontSize: 16,
+    color: "#4361EE",
+    textDecorationStyle: "solid",
   },
 });
