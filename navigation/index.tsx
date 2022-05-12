@@ -29,6 +29,7 @@ import SplashScreen from "../screens/SplashScreen";
 import IntroScreen from "../screens/IntroScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import SignUpScreen from "../screens/SignUpScreen";
+import LoginScreen from "../screens/loginScreen";
 
 export default function Navigation({
   colorScheme,
@@ -69,6 +70,12 @@ function RootNavigator() {
       <Stack.Screen
         name="SignUp"
         component={SignUpScreen}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="Login"
+        component={LoginScreen}
         options={{ headerShown: false }}
       />
 

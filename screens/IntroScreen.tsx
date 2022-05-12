@@ -29,10 +29,16 @@ export default function IntroScreen(props: any) {
           FE-Pay lets you control your money without limitations
         </Text>
       </View>
-      <View style={styles.getStarted}>
-        <SubmitButton title="Get Started" />
-      </View>
-      <TouchableWithoutFeedback onPress={() => navigation.navigate("SignUp")}>
+      <Pressable>
+        <View style={styles.getStarted}>
+          <SubmitButton
+            title="Get Started"
+            onPress={() => navigation.navigate("SignUp")}
+          />
+        </View>
+      </Pressable>
+
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("Login")}>
         <View style={styles.bottomContent}>
           <Text style={styles.bottomText}>Login to FE-Pay</Text>
         </View>
@@ -87,6 +93,8 @@ const styles = StyleSheet.create({
   },
   bottomContent: {
     marginTop: 20,
+    alignItems: "center",
+    justifyContent: "flex-end",
   },
   bottomText: {
     marginTop: 20,

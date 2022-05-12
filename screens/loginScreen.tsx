@@ -1,8 +1,9 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import BackButton from "../components/BackButton";
-import SignUpForm from "../components/SignUpForm";
-export default function SignUpScreen(props: any) {
+import LoginForm from "../components/LoginForm";
+
+export default function LoginScreen(props: any) {
   const { navigation } = props;
   const navigateBack = () => {
     navigation.goBack();
@@ -12,14 +13,11 @@ export default function SignUpScreen(props: any) {
       <View style={styles.backbtnView}>
         <BackButton onPress={navigateBack} />
       </View>
-      <View style={styles.signUpHeaderContent}>
-        <Text style={styles.headerText}>Create your FE-Pay account</Text>
+      <View style={styles.logInHeaderContent}>
+        <Text style={styles.headerText}>Login to your FE-Pay account</Text>
       </View>
-      <View style={styles.signUpForm}>
-        <SignUpForm />
-      </View>
-      <View style={styles.bottomContent}>
-        <Text style={styles.bottomText}>Already have an account? Sign In</Text>
+      <View style={styles.logInForm}>
+        <LoginForm />
       </View>
     </View>
   );
@@ -34,10 +32,9 @@ const styles = StyleSheet.create({
   backbtnView: {
     marginTop: 20,
     marginLeft: 20,
-    // backgroundColor: "red",
   },
-  signUpHeaderContent: {
-    marginTop: 100,
+  logInHeaderContent: {
+    marginTop: 60,
   },
   headerText: {
     textAlign: "center",
@@ -46,21 +43,10 @@ const styles = StyleSheet.create({
     fontFamily: "urbanist-bold",
     fontWeight: "500",
     width: 300,
-    height: 38,
-    lineHeight: 29,
+    height: 100,
     color: "#000000",
   },
-  signUpForm: {
-    marginTop: 0,
-    height: 420,
-    backgroundColor: "#fff",
-  },
-  bottomContent: {
-    alignItems: "center",
-    justifyContent: "flex-end",
-  },
-  bottomText: {
-    color: "#000000",
-    fontSize: 16,
+  logInForm: {
+    marginTop: 60,
   },
 });

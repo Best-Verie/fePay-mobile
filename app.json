@@ -29,6 +29,8 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "description": "Fe-Pay ",
+    "githubUrl": "https://github.com/Best-Verie/fePay-mobile"
   }
 }

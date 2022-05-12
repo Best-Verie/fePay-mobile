@@ -1,15 +1,15 @@
 import React from "react";
-import { TouchableHighlight, Image, StyleSheet } from "react-native";
+import { TouchableWithoutFeedback, Image, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
 export default function BackButton(props: any) {
   return (
-    <TouchableHighlight onPress={props.onPress} style={styles.btnContainer}>
+    <TouchableWithoutFeedback onPress={props.onPress}>
       <Image
         source={require("../assets/images/back.png")}
         style={styles.btnIcon}
       />
-    </TouchableHighlight>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -20,9 +20,6 @@ BackButton.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  btnContainer: {
-    // backgroundColor: "white",
-  },
   btnIcon: {
     top: 20,
     height: 30,

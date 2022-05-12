@@ -14,13 +14,10 @@ const styles = StyleSheet.create({
   button: {
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 12,
-    paddingHorizontal: 32,
     borderRadius: 20,
-    elevation: 3,
     backgroundColor: "#4361EE",
-    width: 400,
-    padding: 20,
+    width: 350,
+    padding: 15,
   },
   text: {
     fontSize: 16,

@@ -1,26 +1,23 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
+import React from "react";
+import { View, StyleSheet, Text, TextInput, Pressable } from "react-native";
 
-export default function SignUpForm() {
-  const [value, setValue] = useState(0);
+export default function LoginForm() {
   const onPress = () => {
     console.log("pressed");
   };
   return (
     <View style={styles.container}>
-      <View>
-        <TextInput placeholder="Name" style={styles.inputStyle} />
-        <TextInput placeholder="Email" style={styles.inputStyle} />
-        <TextInput placeholder="Phone Number" style={styles.inputStyle} />
-      </View>
+      <TextInput placeholder="Email" style={styles.inputStyle} />
+      <TextInput placeholder="PIN" style={styles.inputStyle} />
       <View style={styles.submitButton}>
         <Pressable style={styles.button} onPress={onPress}>
-          <Text style={styles.cap}>Sign Up</Text>
+          <Text style={styles.cap}>Login</Text>
         </Pressable>
       </View>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -41,16 +38,6 @@ const styles = StyleSheet.create({
     borderColor: "#EAECEE",
     borderWidth: 2,
   },
-  formText: {
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#fff",
-    fontSize: 20,
-  },
-  text: {
-    color: "#fff",
-    fontSize: 20,
-  },
   submitButton: {
     marginTop: 40,
   },
@@ -62,6 +49,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "#4361EE",
     width: 327,
+    height: 50,
   },
   cap: {
     fontSize: 16,
