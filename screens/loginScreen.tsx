@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Pressable } from "react-native";
 import BackButton from "../components/BackButton";
 import LoginForm from "../components/LoginForm";
 
@@ -25,9 +25,11 @@ export default function LoginScreen(props: any) {
       <View style={styles.logInForm}>
         <LoginForm />
       </View>
-      <View style={styles.bottomContent}>
-        <Text style={styles.bottomText}>Don't have an account? Sign Up</Text>
-      </View>
+      <Pressable onPress={() => navigation.navigate("SignUp")}>
+        <View style={styles.bottomContent}>
+          <Text style={styles.bottomText}>Don't have an account? Sign Up</Text>
+        </View>
+      </Pressable>
     </View>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Pressable } from "react-native";
 import BackButton from "../components/BackButton";
 import SignUpForm from "../components/SignUpForm";
 export default function SignUpScreen(props: any) {
@@ -23,9 +23,13 @@ export default function SignUpScreen(props: any) {
       <View style={styles.signUpForm}>
         <SignUpForm />
       </View>
-      <View style={styles.bottomContent}>
-        <Text style={styles.bottomText}>Already have an account? Sign In</Text>
-      </View>
+      <Pressable onPress={() => navigation.navigate("Login")}>
+        <View style={styles.bottomContent}>
+          <Text style={styles.bottomText}>
+            Already have an account? Sign In
+          </Text>
+        </View>
+      </Pressable>
     </View>
   );
 }
