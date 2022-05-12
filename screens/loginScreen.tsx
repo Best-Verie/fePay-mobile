@@ -10,14 +10,23 @@ export default function LoginScreen(props: any) {
   };
   return (
     <View style={styles.container}>
-      <View style={styles.backbtnView}>
-        <BackButton onPress={navigateBack} />
+      <View style={styles.topContainer}>
+        <View style={styles.backbtnView}>
+          <BackButton onPress={navigateBack} />
+        </View>
+        <View style={styles.screenTitle}>
+          <Text style={styles.screenTitleText}>Sign in</Text>
+        </View>
       </View>
+
       <View style={styles.logInHeaderContent}>
         <Text style={styles.headerText}>Login to your FE-Pay account</Text>
       </View>
       <View style={styles.logInForm}>
         <LoginForm />
+      </View>
+      <View style={styles.bottomContent}>
+        <Text style={styles.bottomText}>Don't have an account? Sign Up</Text>
       </View>
     </View>
   );
@@ -29,10 +38,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "#fff",
   },
-  backbtnView: {
-    marginTop: 20,
-    marginLeft: 20,
-  },
+
   logInHeaderContent: {
     marginTop: 60,
   },
@@ -47,6 +53,37 @@ const styles = StyleSheet.create({
     color: "#000000",
   },
   logInForm: {
-    marginTop: 60,
+    marginTop: 10,
+    height: 280,
+  },
+  topContainer: {
+    flexDirection: "row",
+    marginTop: 20,
+  },
+
+  backbtnView: {
+    marginLeft: 20,
+    // alignItems: "center",
+    // justifyContent: "flex-start",
+  },
+  screenTitle: {
+    marginTop: 20,
+    marginLeft: 70,
+    // alignItems: "center",
+    // justifyContent: "flex-start",
+  },
+  screenTitleText: {
+    fontSize: 20,
+    fontFamily: "urbanist-regular",
+    fontWeight: "500",
+  },
+  bottomContent: {
+    marginTop: 20,
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  bottomText: {
+    color: "#000000",
+    fontSize: 16,
   },
 });

@@ -9,8 +9,13 @@ export default function SignUpScreen(props: any) {
   };
   return (
     <View style={styles.container}>
-      <View style={styles.backbtnView}>
-        <BackButton onPress={navigateBack} />
+      <View style={styles.topContainer}>
+        <View style={styles.backbtnView}>
+          <BackButton onPress={navigateBack} />
+        </View>
+        <View style={styles.screenTitle}>
+          <Text style={styles.screenTitleText}>Sign up</Text>
+        </View>
       </View>
       <View style={styles.signUpHeaderContent}>
         <Text style={styles.headerText}>Create your FE-Pay account</Text>
@@ -31,11 +36,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "#fff",
   },
-  backbtnView: {
-    marginTop: 20,
-    marginLeft: 20,
-    // backgroundColor: "red",
-  },
+
   signUpHeaderContent: {
     marginTop: 100,
   },
@@ -62,5 +63,26 @@ const styles = StyleSheet.create({
   bottomText: {
     color: "#000000",
     fontSize: 16,
+  },
+  topContainer: {
+    flexDirection: "row",
+    marginTop: 20,
+  },
+
+  backbtnView: {
+    marginLeft: 20,
+    // alignItems: "center",
+    // justifyContent: "flex-start",
+  },
+  screenTitle: {
+    marginTop: 20,
+    marginLeft: 70,
+    // alignItems: "center",
+    // justifyContent: "flex-start",
+  },
+  screenTitleText: {
+    fontSize: 20,
+    fontFamily: "urbanist-regular",
+    fontWeight: "500",
   },
 });
