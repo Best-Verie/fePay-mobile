@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import BackButton from "../components/BackButton";
 
-export default function emailConfirmationScreen(props: any) {
+export default function NumberConfirmationScreen(props: any) {
   const { navigation } = props;
   const navigateBack = () => {
     navigation.goBack();

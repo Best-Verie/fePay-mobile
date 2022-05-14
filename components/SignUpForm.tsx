@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
 
-export default function SignUpForm() {
+export default function SignUpForm(props: any) {
+  const { navigation } = props;
   const [value, setValue] = useState(0);
   const onPress = () => {
-    console.log("pressed");
+    navigation.navigate("Login");
+    // console.log("pressed");
   };
   return (
     <View style={styles.container}>
@@ -14,7 +16,10 @@ export default function SignUpForm() {
         <TextInput placeholder="Phone Number" style={styles.inputStyle} />
       </View>
       <View style={styles.submitButton}>
-        <Pressable style={styles.button} onPress={onPress}>
+        <Pressable
+          style={styles.button}
+          // onPress={() => navigation.navigate("NumberComfirmation")}
+        >
           <Text style={styles.cap}>Sign Up</Text>
         </Pressable>
       </View>

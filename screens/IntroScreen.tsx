@@ -4,7 +4,6 @@ import {
   StyleSheet,
   Text,
   Image,
-  Button,
   Pressable,
   TouchableWithoutFeedback,
 } from "react-native";

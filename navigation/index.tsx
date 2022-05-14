@@ -30,6 +30,7 @@ import IntroScreen from "../screens/IntroScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import SignUpScreen from "../screens/SignUpScreen";
 import LoginScreen from "../screens/loginScreen";
+import NumberConfirmationScreen from "../screens/NumberConfirmationScreen";
 
 export default function Navigation({
   colorScheme,
@@ -55,11 +56,11 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Splash"
         component={SplashScreen}
         options={{ headerShown: false }}
-      />
+      /> */}
 
       <Stack.Screen
         name="Intro"
@@ -78,18 +79,22 @@ function RootNavigator() {
         component={LoginScreen}
         options={{ headerShown: false }}
       />
-
+      <Stack.Screen
+        name="NumberComfirmation"
+        component={NumberConfirmationScreen}
+        options={{ headerShown: false }}
+      />
       {/* <Stack.Screen
         name="TabOne"
         component={TabOneScreen}
         options={{ headerShown: false }}
       /> */}
 
-      {/* <Stack.Screen
+      <Stack.Screen
         name="Root"
         component={BottomTabNavigator}
         options={{ headerShown: false }}
-      /> */}
+      />
 
       {/* <Stack.Screen
         name="NotFound"

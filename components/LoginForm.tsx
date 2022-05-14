@@ -1,16 +1,18 @@
 import React from "react";
 import { View, StyleSheet, Text, TextInput, Pressable } from "react-native";
 
-export default function LoginForm() {
-  const onPress = () => {
-    console.log("pressed");
-  };
+export default function LoginForm(props: any) {
+  const { navigation } = props;
+
   return (
     <View style={styles.container}>
       <TextInput placeholder="Email" style={styles.inputStyle} />
       <TextInput placeholder="PIN" style={styles.inputStyle} />
       <View style={styles.submitButton}>
-        <Pressable style={styles.button} onPress={onPress}>
+        <Pressable
+          style={styles.button}
+          onPress={() => navigation.navigate("root")}
+        >
           <Text style={styles.cap}>Login</Text>
         </Pressable>
       </View>
